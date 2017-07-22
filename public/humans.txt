@@ -1,0 +1,18 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    <name> -- <role> -- <twitter>
+    Yun Suk Choi -- UX Dev
+    Marisa Gianfortune -- Art Factory -- @semisalted
+    Christian Straubhaar-Jones -- Full Stack Developer
+    Belindah Jones -- UX Designer 
+# THANKS
+
+    <name>
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    jQuery, Modernizr
