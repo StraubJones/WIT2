@@ -6,9 +6,13 @@
 
   function ScenarioController ($scope) {
     var $ctrl = this
+    let scoreTrack = 0
     $ctrl.score = 0
     $ctrl.maxscore = 6
     $ctrl.showingResults = false
+    $ctrl.showOne = true
+    $ctrl.showTwo = false
+    $ctrl.showFinal = false
     $ctrl.choice
     $ctrl.scenarioOptions = {
       scenarioOne: {
@@ -101,30 +105,40 @@
       }
     }
 
-    $ctrl.getScoreArray = function (isSuccess) {
-      let tempArray = []
-      let iteration
-      if (isSuccess) {
-        iteration = $ctrl.score
-      } else {
-        iteration = $ctrl.maxscore - $ctrl.score
+    $ctrl.switchScene = function () {
+      if ($ctrl.showOne) {
+        $ctrl.showOne = !$ctrl.showOne
+        $ctrl.showTwo = !$ctrl.showTwo
+      } else if ($ctrl.showTwo) {
+        $ctrl.showTwo = !$ctrl.showTwo
+        $ctrl.showFinal = !$ctrl.showFinal
+        $ctrl.score = scoreTrack
       }
-      for (var i = 0; i < iteration; i++) {
-        tempArray.push({number: i})
-      }
-      return tempArray
     }
 
+    // $ctrl.getScoreArray = function (isSuccess) {
+    //   let tempArray = []
+    //   let iteration
+    //   if (isSuccess) {
+    //     iteration = $ctrl.score
+    //   } else {
+    //     iteration = $ctrl.maxscore - $ctrl.score
+    //   }
+    //   for (var i = 0; i < iteration; i++) {
+    //     tempArray.push({number: i})
+    //   }
+    //   return tempArray
+    // }
+
     $ctrl.showResults = function (option) {
-      console.log('option: ', option)
       $ctrl.choice = option
-      $ctrl.score += option.value
-      console.log('score ', $ctrl.score)
+      let holder = scoreTrack
+      scoreTrack = holder + option.value
       $ctrl.showingResults = true
-      // $scope.$digest()
     }
     $ctrl.next = function () {
       $ctrl.showingResults = false
+      $ctrl.switchScene()
     }
   }
 }())

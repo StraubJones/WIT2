@@ -1,24 +1,2 @@
 <div class="container" ng-controller="ScenarioController as $ctrl">
-  <div ng-hide="$ctrl.showingResults">
-    <h1>Scenario 2: The Job Interview</h1>
-    <p>Meisha has an interview with you and your coworker, Bob, for a new entry level position. During the interview Bob constantly stares at Meisha’s belly and cuts her off asking, “will you really be able to perform the duties of this job?”</p>
-    <ul>
-      <li ng-repeat="option in $ctrl.scenarioOptions.scenarioTwo.dialogOptions" data-toggle="modal" data-target="#modal-scenario-two" ng-click="$ctrl.showResults(option, 'two')">{{option.text}}</li>
-    </ul>
-  </div>
-  <div class="well" ng-show="$ctrl.showingResults">
-    <h5>Results:</h5>
-    <p>You said: {{$ctrl.choice.text}}</p>
-    <h2>{{$ctrl.choice.value}} STARS</h2>
-    <h4>Pros of your choice:</h4>
-    <ul>
-      <li ng-repeat="pro in $ctrl.choice.pros">{{pro}}</li>
-    </ul>
-    <h4>Cons of your choice:</h4>
-    <ul>
-      <li ng-show="$ctrl.choice.cons[0]" ng-repeat="con in $ctrl.choice.cons">{{con}}</li>
-      <li ng-hide="$ctrl.choice.cons[0]">None!</li>
-    </ul>
-    <button type="button" class="btn btn-secondary" data-dismiss="modal" ui-sref="results" ng-click="$ctrl.next">Continue . . .</button>
-  </div>
 </div>
