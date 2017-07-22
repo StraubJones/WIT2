@@ -61,20 +61,34 @@
         dialogOptions: {
           1: {
             text: 'Of course it would be illegal to take issues like pregnancy into consideration for a hire, so let’s focus on her resume, which looks really good.',
-            value: 3,
-            pros: [''],
-            cons: []
+            value: 2,
+            pros: [
+              'Appeals to outside authority.',
+              'Focuses on the important matters for the job.'
+            ],
+            cons: [
+              'Might seem like a threat. Make sure to say it gently or flippantly, so that it doesn’t come across as more menacing than it is meant.'
+            ]
           },
           2: {
-            text: 'Would you ask a man that question? That x',
-            value: 2,
-            pros: [],
-            cons: []
+            text: 'Lots of people need to take leave for different reasons, so it really shouldn’t be that big of a deal.',
+            value: 1,
+            pros: [
+              'Normalizes and contextualizes the possibility of maternity leave.'
+            ],
+            cons: [
+              'Dismisses the boss’ concerns, which might make him less likely to be receptive to your comments.',
+              'Doesn’t directly address the sexism.'
+            ]
           },
           3: {
-            text: 'three',
-            value: 1,
-            pros: [],
+            text: 'There’s actually a lot of studies that show that having a woman workers take maternity leave is good not only for the country\'s economy but for the company she works for. I could show you the studies, if you want ...',
+            value: 3,
+            pros: [
+              'Appeals to outside authority.',
+              'Focuses on the company’s bottom line.',
+              'Dispels sexist myths.'
+            ],
             cons: []
           },
           4: {
@@ -96,7 +110,7 @@
         iteration = $ctrl.maxscore - $ctrl.score
       }
       for (var i = 0; i < iteration; i++) {
-        tempArray.push({number : i})
+        tempArray.push({number: i})
       }
       return tempArray
     }
