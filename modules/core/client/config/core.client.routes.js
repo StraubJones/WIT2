@@ -87,5 +87,13 @@
           pageTitle: 'Scenario 2'
         }
       })
+      .state('results', {
+        url: '/results',
+        templateUrl: '/modules/core/client/views/results.client.view.html',
+        data: {
+          ignoreState: true,
+          pageTitle: 'Results'
+        }
+      })
   }
 }())
