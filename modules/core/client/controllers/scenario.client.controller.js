@@ -7,6 +7,7 @@
   function ScenarioController ($scope) {
     var $ctrl = this
     $ctrl.score = 0
+    $ctrl.maxscore = 6
     $ctrl.showingResults = false
     $ctrl.scenarioOptions = {
       scenarioOne: {
@@ -80,10 +81,25 @@
       }
     }
 
+    $ctrl.getScoreArray = function (isSuccess) {
+      let tempArray = []
+      let iteration
+      if (isSuccess) {
+        iteration = $ctrl.score
+      } else {
+        iteration = $ctrl.maxscore - $ctrl.score
+      }
+      for (var i = 0; i < iteration; i++) {
+        tempArray.push({number : i})
+      }
+      return tempArray
+    }
+
     $ctrl.showResults = function (option) {
       console.log('option: ', option)
       $ctrl.choice = option
       $ctrl.score += option.value
+      console.log('score ', $ctrl.score)
       $ctrl.showingResults = true
       // $scope.$digest()
     }
