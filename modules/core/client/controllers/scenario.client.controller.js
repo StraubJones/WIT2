@@ -8,12 +8,13 @@
     var $ctrl = this
     $ctrl.score = 0
     $ctrl.showingResults = false
+    $ctrl.choice
     $ctrl.scenarioOptions = {
       scenarioOne: {
         dialogOptions: {
           1: {
             text: 'Remember, Karl, how hard she worked on Project A? And she really rallied the team after that tough week in February.',
-            value: 3,
+            value: 1,
             pros: [
               'Focuses on positives.',
               'Recognizes her work.'
@@ -38,8 +39,13 @@
           },
           3: {
             text: 'Well, she’s worked just as hard and been quantitatively more successful than Bob, who we gave this promotion to last year. Is there something specific that is concerning you?',
-            value: 1,
-            pros: [],
+            value: 3,
+            pros: [
+              'Asks questions.',
+              'Addresses the sexism.',
+              'Draws direct attention to the sexism without directly accusing.',
+              'Provides clear evidence for the sexism, making it hard to dismiss.'
+            ],
             cons: []
           },
           4: {
