@@ -1,3 +1,39 @@
+# Powered By Perspective: An Ally's Toolkit
+##### A Capitol One Women in Tech Demo Days Hackathon Project
+Our project was to build a quick narrative game/guide for male allies to know how to respond to sexism in the workplace. It presents different scenarios and options of things one could say to respond to a sexist comment, as well as a rating system of 1-3 stars for each response and some pros and cons for the user to think through, ways in which a given response might be beneficial or detrimental in a given situation.
+
+### The Team
+- Yun Suk Choi: UX Developer
+- Marisa Gianfortune: Artist and Front-End Developer
+- Christian Straubhaar-Jones: Researcher and Full-Stack Developer
+- Belindah Jones: Writer and UX Developer
+
+### Methodology
+
+We based a lot of the pros and cons on articles like this one that give specific, detailed do's and don't's for responding to sexist comments in the workplace: https://hbr.org/2017/02/how-to-respond-to-an-offensive-comment-at-work. A user could play through the game multiple times and try to get the best responses, thinking through what will be the pros and cons of saying X or Y. More links for further reading and inspiration for good responses can also be found in the bottom of the landing page itself.
+
+We also based the situations themselves from real-life examples from sources like:
+- https://www.nytimes.com/2017/06/30/technology/women-entrepreneurs-speak-out-sexual-harassment.html
+- https://www.nytimes.com/2017/06/20/business/women-react-to-sexism-in-the-workplace.html
+- http://everydaysexism.com/
+Our goals was to make the situations as close to accounts of real life encounters as possible, even keeping similar language where we could.
+
+Using this tool, male allies who want to say something but get the deer-in-headlights effect when it actually happens have a chance to game it out beforehand and have some good language in their back pocket, already ready, for when they are faced with sexist situations.
+
+### Clarifications, Explanations, Attributions
+
+Because it was a hackathon and time was of the essence, we used a generator. AngularJS was the framework most familiar to our 1.5 developers (myself and Marisa, who spent most of her time on the art as per her own preferences, but also was willing to help with the code too for the final crunch), so we chose the MEAN.JS generator.
+
+Most of the modules we ended up not needing for the MVP, so most of the original code and original work generally can be found in `Modules -> core -> client`. Because of a state management issue that we just didn't have time to implement better, we ended up having almost all of the game HTML in `modules/core/client/views/scenarioOne.client.view.html`, despite initially wanting each view to be a separate file.
+
+Regarding the original assets, the figures were drawn by Marisa Gianfortune, and the backgrounds done by Yun Suk Choi. The majority of the JS, HTML, and CSS code is Christian Straubhaar-Jones', as well as the majority of the text of the responses and their pros and cons. The scenario text, the front page art, the combination of figures and backgrounds was done by Belindah Jones.
+
+Everything we added here (art, text, code) was made in 8 hours on July 22nd, 2017, during the second day of the hackathon.
+
+All work not part of the original Mean.JS boilerplate is copyright of Yun Suk Choi, Marisa Gianfortune, Christian Straubhaar-Jones, and Belindah Jones, all rights reserved.
+
+# Mean.JS ReadMe after this point:
+
 [![MEAN.JS Logo](http://meanjs.org/img/logo-small.png)](http://meanjs.org/)
 
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/meanjs/mean?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
